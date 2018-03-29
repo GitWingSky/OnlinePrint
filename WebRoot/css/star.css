@@ -1,0 +1,49 @@
+.star-rating {
+	font-family: 'FontAwesome';
+}
+
+.star-rating>fieldset {
+	border: none;
+	display: inline-block;
+}
+
+.star-rating>fieldset:not(:checked)>input {
+	position: absolute;
+	top: -9999px;
+	clip: rect(0, 0, 0, 0);
+}
+
+.star-rating>fieldset:not(:checked)>label {
+	float: right;
+	width: 1em;
+	padding: 0 .05em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 200%;
+	color: #facc16;
+}
+
+.star-rating>fieldset:not(:checked)>label:before {
+	content: '\f006  ';
+}
+
+.star-rating>fieldset:not(:checked)>label:hover,
+.star-rating>fieldset:not(:checked)>label:hover~label {
+	color: #facc16;
+	text-shadow: 0 0 3px #facc16;
+}
+
+.star-rating>fieldset:not(:checked)>label:hover:before,
+.star-rating>fieldset:not(:checked)>label:hover~label:before {
+	content: '\f005  ';
+}
+
+.star-rating>fieldset>input:checked~label:before {
+	content: '\f005  ';
+}
+
+.star-rating>fieldset>label:active {
+	position: relative;
+	top: 2px;
+}
