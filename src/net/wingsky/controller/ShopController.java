@@ -319,5 +319,14 @@ public class ShopController {
 		}
 	}
 	
+	@RequestMapping(value="/shopAdmin")
+	public String shopAdmin(Model model, HttpServletRequest request){
+		HttpSession session = request.getSession();   
+		int userId = Integer.parseInt(session.getAttribute("userId").toString());
+		Shop shop = null;
+		shop = shopService.getByUserId(userId);
+		model.addAttribute("shopName", shop.getShopName());
+		return "shopAdmin";
+	}
 	
 }

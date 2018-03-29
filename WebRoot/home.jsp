@@ -697,7 +697,8 @@
 			
 			function confirm(){
 				var message = $("#message").val();
-				var star = $("input[type=radio][name=rating]").val();
+				var star = $("input[type=radio][name=rating]:checked").val();
+				console.log(star);
 				$.ajax({
 					type: "POST", //用POST方式传输
 					dataType: "text", //数据格式:JSON

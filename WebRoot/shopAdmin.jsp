@@ -23,7 +23,7 @@
 	<body>
 	    <!-- 顶部开始 -->
 	    <div class="container">
-	        <div class="logo"><a href="./index.html">官方打印店</a></div>
+	        <div class="logo"><a href="./index.html">${shopName }</a></div>
 	        <div class="left_open">
 	            <i title="展开左侧栏" class="iconfont">&#xe699;</i>
 	        </div>
